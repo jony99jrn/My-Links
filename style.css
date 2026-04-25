@@ -127,6 +127,16 @@ h1 { font-size: 1.8rem; margin: 0; }
 .highlight { color: #00ccff; }
 .intro-text { color: #888; margin: 15px 0 35px; font-size: 0.95rem; }
 
+.profile-description {
+    font-size: 1rem;
+    color: #00ccff; /* আপনার নীল থিমের সাথে মিলিয়ে */
+    margin: 10px 0 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+
 /* লিংক আইটেম */
 .links-container { display: flex; flex-direction: column; gap: 15px; }
 
