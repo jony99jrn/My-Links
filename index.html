@@ -11,11 +11,21 @@
 
     <div id="loader-wrapper">
         <div class="main-container">
-            <svg class="loader" viewBox="0 0 200 100">
-                <path class="trace-bg" d="M20,50 L180,50"></path>
-                <path class="trace-flow blue" d="M20,50 L180,50"></path>
-                <rect class="chip-body" x="75" y="30" width="50" height="40" fill="#222" stroke="#444" rx="5" ry="5" />
-                <text x="100" y="55" text-anchor="middle" fill="#00ccff" class="chip-text" style="font-size: 7px; font-family: Arial;">JRN</text>
+            <svg class="loader" viewBox="0 0 200 200">
+                <path class="trace-bg" d="M20,100 L180,100"></path>
+                <path class="trace-flow blue" d="M20,100 L180,100"></path>
+                
+                <line class="chip-pin" x1="85" y1="75" x2="85" y2="80" />
+                <line class="chip-pin" x1="100" y1="75" x2="100" y2="80" />
+                <line class="chip-pin" x1="115" y1="75" x2="115" y2="80" />
+                
+                <line class="chip-pin" x1="85" y1="120" x2="85" y2="125" />
+                <line class="chip-pin" x1="100" y1="120" x2="100" y2="125" />
+                <line class="chip-pin" x1="115" y1="120" x2="115" y2="125" />
+                
+                <rect class="chip-body" x="75" y="80" width="50" height="40" fill="#222" stroke="#444" />
+                
+                <text x="100" y="105" text-anchor="middle" fill="currentColor" class="chip-text blue" style="font-size: 8px; font-family: Arial;">JRN</text>
             </svg>
         </div>
     </div>
@@ -55,6 +65,18 @@
                 </a>
             </div>
 
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <a href="https://github.com/jony99jrn/Form---1" target="_blank" class="project-card purple-border">
+                    <h3>Form-1</h3>
+                    <p>Success Page Design</p>
+                </a>
+                <a href="#" target="_blank" class="project-card blue-border">
+                    <h3>Bio-Dome</h3>
+                    <p>Habit Tracker</p>
+                </a>
+            </div>
+
             <div class="footer">
                 <p>© 2026 JRN STUDIO</p>
             </div>
@@ -62,13 +84,15 @@
     </div>
 
     <script>
-        // Loader timeout
+        // Hide loader after page loads
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const loader = document.getElementById('loader-wrapper');
                 loader.style.opacity = '0';
-                setTimeout(() => { loader.style.display = 'none'; }, 500);
-            }, 1500);
+                setTimeout(() => { 
+                    loader.style.display = 'none'; 
+                }, 500);
+            }, 2000); // 2 seconds delay
         });
     </script>
 </body>
