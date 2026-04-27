@@ -127,13 +127,33 @@ h1 { font-size: 1.8rem; margin: 0; }
 .highlight { color: #00ccff; }
 .intro-text { color: #888; margin: 15px 0 35px; font-size: 0.95rem; }
 
-.profile-description {
-    font-size: 1rem;
-    color: #00ccff; /* আপনার নীল থিমের সাথে মিলিয়ে */
-    margin: 10px 0 20px;
-    font-weight: 500;
-    line-height: 1.4;
-    opacity: 0.9;
+.education-info {
+    margin: 15px 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.edu-item {
+    background: rgba(0, 204, 255, 0.05);
+    border: 1px solid rgba(0, 204, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #00ccff;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.edu-item:hover {
+    background: rgba(0, 204, 255, 0.12);
+    border-color: #00ccff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 204, 255, 0.2);
 }
 
 
