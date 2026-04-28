@@ -30,7 +30,14 @@ body, html {
     mask-image: linear-gradient(to right, rgba(0,0,0,0), #000 30%, #000 70%, rgba(0,0,0,0));
     font-family: monospace;
 }
-
+.footer {
+    margin-top: 40px;
+    font-size: 0.7rem;
+    color: #333;
+    width: 100%;       /* কার্ডের পুরো জায়গা জুড়ে থাকবে */
+    text-align: center; /* টেক্সট মাঝখানে থাকবে */
+    display: block;    /* নিশ্চিত করবে যেন এটি পুরো লাইন দখল করে */
+}
 .letter {
     width: 1ch;
     position: absolute;
