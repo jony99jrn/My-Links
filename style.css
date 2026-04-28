@@ -8,7 +8,7 @@ body, html {
     overflow-x: hidden;
 }
 
-/* --- লডার সেকশন (রেইনবো স্ক্রোলিং) --- */
+/* --- লডার সেকশন --- */
 #loader-wrapper {
     position: fixed;
     top: 0; left: 0;
@@ -21,20 +21,13 @@ body, html {
     transition: opacity 0.8s ease;
 }
 
-/* From Uiverse.io by Uncannypotato69 */ 
 .wrapper {
     min-height: 3rem;
     min-width: 14rem;
     font-size: 2rem;
     position: relative;
     overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 1) 30%,
-        rgba(0, 0, 0, 1) 70%,
-        rgba(0, 0, 0, 0)
-    );
+    mask-image: linear-gradient(to right, rgba(0,0,0,0), #000 30%, #000 70%, rgba(0,0,0,0));
     font-family: monospace;
 }
 
@@ -49,54 +42,52 @@ body, html {
 }
 
 @keyframes scroll { to { left: -1ch; } }
-
 @keyframes rainbow {
     0% { color: white; }
-    10% { color: #ff0000; }
     20% { color: #ff8700; }
-    30% { color: #ffd300; }
     40% { color: #deff0a; }
-    50% { color: #a1ff0a; }
     60% { color: #0aff99; }
-    70% { color: #0aefff; }
     80% { color: #147df5; }
-    90% { color: #580aff; }
     100% { color: #be0aff; }
 }
 
-/* Animation Delays */
-.letter1 { animation-delay: calc(2.5s / 10 * (10 - 1) * -1); }
-.letter2 { animation-delay: calc(2.5s / 10 * (10 - 2) * -1); }
-.letter3 { animation-delay: calc(2.5s / 10 * (10 - 3) * -1); }
-.letter4 { animation-delay: calc(2.5s / 10 * (10 - 4) * -1); }
-.letter5 { animation-delay: calc(2.5s / 10 * (10 - 5) * -1); }
-.letter6 { animation-delay: calc(2.5s / 10 * (10 - 6) * -1); }
-.letter7 { animation-delay: calc(2.5s / 10 * (10 - 7) * -1); }
-.letter8 { animation-delay: calc(2.5s / 10 * (10 - 8) * -1); }
-.letter9 { animation-delay: calc(2.5s / 10 * (10 - 9) * -1); }
-.letter10 { animation-delay: calc(2.5s / 10 * (10 - 10) * -1); }
+.letter1 { animation-delay: -2.25s; }
+.letter2 { animation-delay: -2.00s; }
+.letter3 { animation-delay: -1.75s; }
+.letter4 { animation-delay: -1.50s; }
+.letter5 { animation-delay: -1.25s; }
+.letter6 { animation-delay: -1.00s; }
+.letter7 { animation-delay: -0.75s; }
+.letter8 { animation-delay: -0.50s; }
+.letter9 { animation-delay: -0.25s; }
+.letter10 { animation-delay: 0s; }
 
-/* --- অটোমেটিক ফিট কন্টেন্ট ডিজাইন --- */
+/* --- কন্টেন্ট ডিজাইন --- */
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px; /* মোবাইলে সাইড গ্যাপের জন্য */
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .profile-card {
     width: 100%;
-    max-width: 420px; /* ডেস্কটপে এর চেয়ে বেশি বড় হবে না */
+    max-width: 420px;
     background: #111;
     padding: 35px 25px;
     border-radius: 30px;
     border: 1px solid #222;
     text-align: center;
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-    box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* মোবাইল ডিফল্ট লেআউট */
+.desktop-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .avatar-container {
@@ -125,9 +116,8 @@ body, html {
 
 h1 { font-size: 1.8rem; margin: 0; }
 .highlight { color: #00ccff; }
-.intro-text { color: #888; margin: 15px 0 30px; font-size: 0.95rem; }
+.intro-text { color: #888; margin: 15px 0 20px; font-size: 0.95rem; }
 
-/* এডুকেশন সেকশন */
 .education-info {
     margin: 15px 0 25px;
     display: flex;
@@ -146,12 +136,8 @@ h1 { font-size: 1.8rem; margin: 0; }
     gap: 10px;
     font-size: 0.85rem;
     color: #00ccff;
-    transition: all 0.3s ease;
-    width: fit-content;
-    max-width: 90%; /* টেক্সট বড় হলে যেন বাইরে না যায় */
 }
 
-/* লিংক বাটনসমূহ */
 .links-container { display: flex; flex-direction: column; gap: 12px; }
 
 .link-item {
@@ -167,7 +153,6 @@ h1 { font-size: 1.8rem; margin: 0; }
 .green-border:hover { border-color: #00ff15; color: #00ff15; }
 .yellow-border:hover { border-color: #ffea00; color: #ffea00; }
 
-/* প্রজেক্ট গ্রিড (অটোমেটিক কলাম) */
 .section-title { font-size: 0.85rem; color: #444; text-transform: uppercase; margin: 35px 0 15px; letter-spacing: 3px; }
 
 .projects-grid { 
@@ -181,15 +166,55 @@ h1 { font-size: 1.8rem; margin: 0; }
     text-decoration: none; text-align: left; transition: 0.3s;
 }
 
-.project-card h3 { font-size: 0.9rem; margin: 0; color: #fff; }
+.project-card h3 { font-size: 0.9rem; color: #fff; margin: 0; }
 .project-card p { font-size: 0.7rem; color: #666; margin: 5px 0 0; }
 .project-card:hover { border-color: #9900ff; background: #1a1a1a; }
 
 .footer { margin-top: 40px; font-size: 0.7rem; color: #333; }
 
-/* বড় স্ক্রিনের জন্য বিশেষ পরিবর্তন */
+/* --- বড় স্ক্রিনের জন্য আপনার স্কেচ অনুযায়ী ডেস্কটপ ভিউ --- */
 @media (min-width: 768px) {
-    h1 { font-size: 2.1rem; }
-    .profile-card { padding: 45px 35px; max-width: 450px; }
-    .profile-card:hover { box-shadow: 0 25px 60px rgba(0, 204, 255, 0.15); }
+    .profile-card {
+        max-width: 850px; 
+        padding: 50px 40px;
+        text-align: left;
+    }
+
+    .desktop-wrapper {
+        flex-direction: row; /* দুই কলাম পাশাপাশি */
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 20px;
+    }
+
+    .profile-header {
+        flex: 1.2;
+        border-right: 1px solid #222;
+        padding-right: 40px;
+    }
+
+    .links-section {
+        flex: 1;
+    }
+
+    .avatar-container {
+        margin: 0 0 20px 0; /* ছবি বামে */
+    }
+
+    .education-info {
+        align-items: flex-start; /* টেক্সট বামে */
+    }
+
+    .intro-text {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .profile-card:hover {
+        box-shadow: 0 25px 60px rgba(0, 204, 255, 0.15);
+    }
 }
